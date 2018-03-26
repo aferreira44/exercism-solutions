@@ -7,5 +7,5 @@ def is_isogram(string):
 
         if (list(string).count(string[i]) > 1):
             return False
-            
+        
     return True
