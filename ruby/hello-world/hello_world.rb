@@ -1,5 +1,5 @@
 module HelloWorld
   def self.hello
-    return "Hello, World!"
+    'Hello, World!'
   end
 end
