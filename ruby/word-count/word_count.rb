@@ -4,18 +4,21 @@ class Phrase
   end
 
   def word_count
-    hash = Hash.new
+    result = Hash.new
 
-    # Split words to an array avoiding special characters
-    array = @words.gsub(/[^a-zA-Z0-9']|'(?!\w\s)/, ' ').strip.split(%r{[, ]\s*})
+    # Remove special characters and strip
+    @words.gsub!(/[^a-zA-Z0-9']|'(?!\w\s)/, ' ')
+    @words.strip!
+
+    # Split words in an array
+    array = @words.split(%r{[, ]\s*})
 
     # Normalize case
     array.each { |w| w.downcase! }
 
     # Count words
-    array.map { |w| hash[w] = array.count(w) }
+    array.map { |w| result[w] = array.count(w) }
       
-    hash
+    result
   end
 end
-
