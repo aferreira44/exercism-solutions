@@ -31,6 +31,5 @@
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint ."
   },
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }
