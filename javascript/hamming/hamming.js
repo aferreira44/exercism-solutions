@@ -1,24 +1,24 @@
-export const compute = (strandA, strandB) => {
-  validateArgs(strandA, strandB);
+export const compute = (strandL, strandR) => {
+  validateArgs(strandL, strandR);
 
   let count = 0;
 
-  for (let i = 0; i <= strandA.length; i++) {
-    if (strandA[i] !== strandB[i]) {
+  for (let i = 0; i <= strandL.length; i++) {
+    if (strandL[i] !== strandR[i]) {
       count++;
     }
   }
   return count;
 };
 
-function validateArgs(strandA, strandB) {
-  if (!strandA && !strandB) {
+function validateArgs(strandL, strandR) {
+  if (!strandL && !strandR) {
     return;
-  } else if (!strandA) {
+  } else if (!strandL) {
     throw Error("left strand must not be empty");
-  } else if (!strandB) {
+  } else if (!strandR) {
     throw Error("right strand must not be empty");
-  } else if (strandA.length != strandB.length) {
+  } else if (strandL.length != strandR.length) {
     throw Error("left and right strands must be of equal length");
   } else {
     return;
