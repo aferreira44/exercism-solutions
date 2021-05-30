@@ -1,8 +1,26 @@
-//
-// This is only a SKELETON file for the 'Hamming' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+export const compute = (strandA, strandB) => {
+  validateArgs(strandA, strandB);
 
-export const compute = () => {
-  throw new Error('Remove this statement and implement this function');
+  let count = 0;
+
+  for (let i = 0; i <= strandA.length; i++) {
+    if (strandA[i] !== strandB[i]) {
+      count++;
+    }
+  }
+  return count;
 };
+
+function validateArgs(strandA, strandB) {
+  if (!strandA && !strandB) {
+    return;
+  } else if (!strandA) {
+    throw Error("left strand must not be empty");
+  } else if (!strandB) {
+    throw Error("right strand must not be empty");
+  } else if (strandA.length != strandB.length) {
+    throw Error("left and right strands must be of equal length");
+  } else {
+    return;
+  }
+}
