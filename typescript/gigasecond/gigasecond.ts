@@ -1,13 +1,13 @@
 class Gigasecond {
-  _date: Date;
+  startDate: Date;
 
   constructor(date: Date) {
-    this._date = date;
+    this.startDate = date;
   }
 
   date(): Date {
-    const gigasecondDate = new Date(this._date);
-    gigasecondDate.setSeconds(this._date.getSeconds() + Math.pow(10, 9));
+    const gigasecondDate = new Date(this.startDate);
+    gigasecondDate.setSeconds(this.startDate.getSeconds() + Math.pow(10, 9));
     return gigasecondDate;
   }
 }
