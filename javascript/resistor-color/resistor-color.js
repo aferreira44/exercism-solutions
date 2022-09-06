@@ -3,16 +3,7 @@
 // convenience to get you started writing code faster.
 //
 
-export const colorCode = (color) => {
-  switch (color) {
-    case "black":
-      return 0;
-    case "white":
-      return 9;
-    case "orange":
-      return 3;
-  }
-};
+export const colorCode = (color) => COLORS.indexOf(color);
 
 export const COLORS = [
   "black",
