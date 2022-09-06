@@ -1,10 +1,11 @@
-# Exercism
-.exercism
-
+# IDEs
 .vscode
+
+# JavaScript
 node_modules
 .solution.json
 
+# Python
 __pycache__
 .cache
 *.pyc
